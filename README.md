@@ -20,5 +20,5 @@ rm -rf old-repository.git
 ## Nested git command (worked on windows)
 Export all uncommit files to diff.zip
 ```
-git archive -o diff.zip $(git ls-files -m)
+git archive -o patch.zip HEAD $(git ls-files -m)
 ```
