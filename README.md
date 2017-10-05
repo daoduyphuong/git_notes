@@ -16,3 +16,9 @@ Remove the temporary local repository you created in step 1.
 cd ..
 rm -rf old-repository.git
 ```
+
+## Nested git command (worked on windows)
+Export all uncommit files to diff.zip
+```
+git archive -o diff.zip $(git ls-files -m)
+```
