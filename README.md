@@ -23,6 +23,11 @@ Export all modified files to diff.zip
 git archive -o patch.zip HEAD $(git ls-files -m)
 ```
 
+Export all commited files to diff.zip
+```
+git archive -o diff.zip HEAD $(git diff --name-only HEAD^ --diff-filter=ACMRTU)
+```
+Above command use option '--diff-filter=ACMRTU' to NOT get Deleted files, Unknown files, Broken Files
 ## Get log of unpushed git commit
 ```
 git log origin/$branch_name..$branch_name
