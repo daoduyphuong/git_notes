@@ -23,9 +23,21 @@ Export all modified files to diff.zip
 git archive -o patch.zip HEAD $(git ls-files -m)
 ```
 
-## get log of unpushed git commit
+## Get log of unpushed git commit
 ```
 git log origin/$branch_name..$branch_name
 ```
 $branch_name: your branch name, ex: master
 You can add '--oneline' to view short log
+
+### Get list unpushed git commited files
+```
+git diff --name-only HEAD^
+```
+Above command will show list of all changed that commited, include Added (A), Copied (C), Deleted (D), Modified (M), Renamed (R), have their type (i.e. regular file, symlink, submodule, …​) changed (T), are Unmerged (U), are Unknown (X), or have had their pairing Broken (B).
+If you want to show certain type, just use --diff-filter. For example:
+```
+git diff --name-only HEAD^ --diff-filter=ACMRTU          // get list file Added, Copied, Modified, Renamed, changed, Unmerged
+```
+
+
