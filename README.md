@@ -18,7 +18,14 @@ rm -rf old-repository.git
 ```
 
 ## Nested git command (worked on windows)
-Export all uncommit files to diff.zip
+Export all modified files to diff.zip
 ```
 git archive -o patch.zip HEAD $(git ls-files -m)
 ```
+
+## get log of unpushed git commit
+```
+git log origin/$branch_name..$branch_name
+```
+$branch_name: your branch name, ex: master
+You can add '--oneline' to view short log
