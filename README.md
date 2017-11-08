@@ -45,14 +45,14 @@ If you want to show certain type, just use --diff-filter. For example:
 git diff --name-only HEAD^ --diff-filter=ACMRTU          // get list file Added, Copied, Modified, Renamed, changed, Unmerged
 ```
 
-### Set username and email
-## Global
+## Set username and email
+### Global
 ```
 git config --global user.name "your name"
 git config --global user.email "your email"
 ```
 
-## Repository
+### Repository
 ```
 git config user.name "your name"
 git config user.email "your email"
